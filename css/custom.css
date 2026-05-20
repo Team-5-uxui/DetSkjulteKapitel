@@ -1,0 +1,101 @@
+/* Farvevariabler */
+html {
+  /* Primary colors */
+  --primary-bg: #fff;
+  --header-footer-bg: #f5e8de;
+
+  /* Font colors */
+  --text-color: #000;
+  --text-inverted: #fff;
+
+  /* Buttons */
+  --primary-btn: #763f81;
+  --arrow-btn: #f5e8de;
+
+  /* Cards */
+  --podcast-card-bg: #561269;
+  --book-card-bg: #f5e8de;
+  --filter-bg: #fff;
+  --reviews-card-bg: #763f81;
+  --om-os-card-bg: #763f81;
+  --individual-card-bg: #5a3162;
+  --forms-bg: #c5aabb;
+}
+
+/* Fonts Desktop */
+h1 {
+  font-family: "Cinzel Decorative Bold";
+  font-size: 3rem;
+}
+h2 {
+  font-family: "Cinzel Decorative Bold";
+  font-weight: 600;
+  font-size: 1.75rem;
+}
+h3 {
+  font-family: "Helvetica Neue";
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+h4 {
+  font-family: "Helvetica Neue";
+  font-weight: 400;
+  font-size: 1.375rem;
+}
+h5 {
+  font-family: "Helvetica Neue";
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+p {
+  font-family: "Helvetica Neue";
+  font-weight: 300;
+  font-size: 1.25rem;
+}
+
+nav {
+  font-family: "Helvetica Neue";
+  font-weight: 300;
+}
+
+/* Fonts Mobile */
+@media (max-width: 800px) {
+  h1 {
+    font-family: "Cinzel Decorative Bold";
+    font-weight: 700;
+    font-size: 2rem;
+  }
+  h2 {
+    font-family: "Cinzel Decorative Bold";
+    font-weight: 600;
+    font-size: 1.625rem;
+  }
+  h3 {
+    font-family: "Helvetica Neue";
+    font-weight: 500;
+    font-size: 1.4rem;
+  }
+  h4 {
+    font-family: "Helvetica Neue";
+    font-weight: 400;
+    font-size: 1.375rem;
+  }
+  h5 {
+    font-family: "Helvetica Neue";
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+
+  p {
+    font-family: "Helvetica Neue";
+    font-weight: 300;
+    font-size: 1rem;
+  }
+
+  nav {
+    font-family: "Helvetica Neue";
+    font-weight: 300;
+    font-size: 1.375rem;
+  }
+}
