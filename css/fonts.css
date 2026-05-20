@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Cinzel Decorative Black";
+  src: url(../fonts/CinzelDecorative-Black.woff2);
+}
+
+@font-face {
+  font-family: "Cinzel Decorative Bold";
+  src: url(../fonts/CinzelDecorative-Bold.woff2);
+}
+
+@font-face {
+  font-family: "Cinzel Decorative";
+  src: url(../fonts/CinzelDecorative-Regular.woff2);
+}
