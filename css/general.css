@@ -77,6 +77,24 @@ header {
   border-radius: 2px;
 }
 
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.hamburger span {
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
 .mobile-menu {
   display: none;
   flex-direction: column;
@@ -107,7 +125,8 @@ footer {
   margin: 0 auto;
   padding: 28px 40px;
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "social logo listen";
   align-items: center;
   gap: 24px;
 }
@@ -117,6 +136,7 @@ footer {
   letter-spacing: 1.5px;
   display: block;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .social-icons {
@@ -151,7 +171,7 @@ footer {
 }
 
 .logo-img-footer {
-  height: 70px;
+  height: 120px;
   width: auto;
   display: block;
 }
@@ -162,7 +182,33 @@ footer {
   color: var(--text-color);
 }
 
-@media (max-width: 768px) {
+@media (min-width: 801px) {
+  .footer-social {
+    grid-area: social;
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+  }
+
+  .footer-logo {
+    grid-area: logo;
+    justify-self: center;
+  }
+
+  .footer-listen {
+    grid-area: listen;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-self: end;
+  }
+
+  .footer-bottom-row {
+    display: contents;
+  }
+}
+
+@media (max-width: 800px) {
   .header-desktop {
     display: none;
   }
@@ -172,18 +218,44 @@ footer {
 
   .footer-inner {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "logo"
+      "social"
+      "listen";
     text-align: center;
     padding: 24px 20px;
-    gap: 20px;
   }
 
   .footer-social {
+    justify-self: center;
     align-items: center;
   }
   .footer-listen {
+    justify-self: center;
     align-items: center;
   }
   .footer-bottom {
     padding: 12px 20px;
+  }
+
+  .footer-logo {
+    order: -1;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .logo-img-footer {
+    height: 90px;
+    width: auto;
+  }
+
+  .footer-bottom-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .social-icons {
+    gap: 4px;
   }
 }
