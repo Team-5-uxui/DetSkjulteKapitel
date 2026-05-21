@@ -1,0 +1,243 @@
+img {
+  max-width: 100%;
+}
+
+h2 {
+  place-self: center;
+  padding: 2em 0 2em 0;
+}
+
+.grid-1_1_1 {
+  background-color: var(--podcast-card-bg);
+  margin: 3em;
+  border-radius: 40px;
+  color: var(--text-inverted);
+  position: relative;
+}
+
+.margin {
+  margin: 2em 0 2em 2em;
+}
+
+.margin2{
+
+margin-top: 1em;
+}
+
+
+.grid-1_1_1 div h3
+p {
+  margin-left: 2em;
+  
+}
+
+.SoMe {
+  display: flex;
+  gap: 1em;
+  margin-left: 2em;
+  padding-bottom: 2em;
+}
+
+.playBtn {
+  position: absolute;
+  bottom: 2em;
+  right: 2em;
+}
+
+.LogoBeige {
+  padding-top: 3em;
+  place-self: center;
+}
+
+.AnbefalingCard {
+  background-color: var(--book-card-bg);
+  padding: 2em;
+  margin: 4em;
+  border-radius: 20px;
+  max-width: 70%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  place-self: center;
+}
+
+.IndividuelAnbefaling {
+  background-color: var(--podcast-card-bg);
+  color: var(--text-inverted);
+  border-radius: 20px;
+  padding: 1em 3em 1em 3em;
+  position: relative;
+  place-self: center;
+}
+
+.AnbefalingCard a p{
+  text-decoration: none;
+    background-color: var(--primary-btn);
+    color: var(--text-inverted);
+    border-radius: 20px;
+    place-self: center;
+    padding: 0 3.5em 0 3.5em;
+    margin-top: 2em;
+}
+
+.filter-wrapper {
+  margin: 1em 5em;
+}
+
+.filter-btn {
+  cursor: pointer;
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 0.5em 1.5em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.filter-panel {
+  display: none;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1.5em;
+  margin-top: 0.5em;
+  width: 250px;
+}
+
+.filter-panel.aktiv {
+  display: block;
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+.filter-header p {
+  margin: 0;
+  font-weight: normal;
+}
+
+.filter-header button {
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.filter-titel {
+  cursor: pointer;
+  margin: 0.8em 0;
+}
+
+.filter-titel.aaben {
+  font-weight: bold;
+}
+
+.filter-valg {
+  display: none;
+  margin-left: 1em;
+}
+
+.filter-valg.aaben {
+  display: block;
+}
+
+.filter-valg p {
+  cursor: pointer;
+  padding: 0.3em 0;
+  margin: 0;
+}
+
+.filter-valg p.valgt {
+  font-weight: bold;
+  color: var(--primary-btn);
+}
+@media (min-width: 768px) {
+  img {
+    max-width: 100%;
+  }
+
+  h2 {
+    place-self: center;
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+  }
+
+  .grid-1_1_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 70%;
+    margin-top: 2.5em;
+    margin-bottom: 4em;
+    padding: 4em;
+    place-self: center;
+    background-color: var(--podcast-card-bg);
+    color: var(--text-inverted);
+    border-radius: 40px;
+  }
+
+  .grid-1_1_1 img {
+    max-width: 90%;
+  }
+
+  /* .margin {
+    margin-top: 1em;
+  } */
+
+  .SoMe {
+    padding-left: 3em;
+  }
+
+  .SoMe img {
+    max-width: 110%;
+  }
+
+  .playBtn {
+    place-self: end;
+    margin-top: 9em;
+    margin-right: 2.5em;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 5em;
+    place-items: center;
+    padding: 0 5em 0 5em;
+  }
+
+  .grid a p {
+    text-decoration: none;
+    background-color: var(--primary-btn);
+    color: var(--text-inverted);
+    border-radius: 20px;
+    place-self: center;
+    padding: 0 3.5em 0 3.5em;
+    margin-top: 2em;
+  }
+
+  .grid h3 {
+    margin-top: 2em;
+  }
+  .AnbefalingCard {
+    background-color: var(--book-card-bg);
+    border-radius: 20px;
+    max-width: 90%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+    margin: 1em;
+  }
+
+  .AnbefalingCard div {
+    place-self: center;
+  }
+
+  .IndividuelAnbefaling {
+    background-color: var(--podcast-card-bg);
+    color: var(--text-inverted);
+    border-radius: 20px;
+    place-self: self-start;
+    padding: 0 1em 0 1em;
+  }
+}
