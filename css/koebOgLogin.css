@@ -31,6 +31,10 @@ hr {
   border-top: 1px solid var(--linje);
   margin: 3rem 0;
 }
+input {
+  font-family: "Helvetica Neue";
+  font-weight: 300;
+}
 
 /* Desktop */
 @media (width>850px) {
@@ -72,6 +76,8 @@ hr {
       height: 57px;
       border-radius: 20px;
       border: none;
+      padding: 1em;
+      font-size: 1rem;
     }
   }
   .opret-btn {
@@ -81,6 +87,9 @@ hr {
   .login-btn {
     align-self: center;
     padding: 0.3rem 1rem;
+  }
+  input[type="checkbox"] {
+    accent-color: var(--primary-btn);
   }
 }
 
@@ -110,6 +119,8 @@ hr {
       width: 250px;
       height: 28px;
       border: none;
+      padding: 1em;
+      font-size: 0.8rem;
     }
     .error-message {
       font-family: "Helvetica Neue";
@@ -135,5 +146,25 @@ hr {
     gap: 0.8rem;
     align-self: flex-start;
     margin-bottom: 1.5em;
+  }
+}
+/* Valideringsregler */
+.error-message {
+  display: none;
+}
+.form-group:has(:required) {
+  label::after {
+    content: " *";
+    color: var(--podcast-card-bg);
+  }
+}
+.form-group:has(:user-invalid) {
+  input {
+    outline: 2px solid var(--primary-btn);
+    border-color: var(--primary-btn);
+  }
+
+  .error-message {
+    display: block;
   }
 }
