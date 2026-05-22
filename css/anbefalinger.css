@@ -196,7 +196,7 @@ h1 {
   color: var(--text-inverted);
   border-radius: 40px;
   padding: 1em;
-  max-width: 80%;
+  max-width: 85%;
   place-self: center;
 }
 
@@ -424,9 +424,5 @@ textarea {
 
   .kommentarer {
     margin-left: 14em;
-  }
-
-  textarea::placeholder {
-    color: var(--text-color);
   }
 }
