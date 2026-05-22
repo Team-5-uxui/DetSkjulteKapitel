@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/koebOgLogin.css" />
   </head>
   <body>
     <header>
@@ -45,6 +46,73 @@
         <a href="kurv.html">Kurv</a>
       </nav>
     </header>
+    <main>
+      <h1>Tilmeld / Log ind</h1>
+      <section id="login-form">
+        <article id="login-info">
+          <h2>Log Ind</h2>
+        </article>
+        <form id="loginform">
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required />
+            <p class="error-message">Udfyld venligst feltet</p>
+          </div>
+          <div class="form-group">
+            <label for="password">Adgangskode</label>
+            <input type="password" id="password" name="password" required />
+            <p class="error-message">Udfyld venligst feltet</p>
+          </div>
+        </form>
+        <button class="login-btn">Log ind</button>
+      </section>
+      <hr />
+      <section id="tilmeld-form">
+        <article id="tilmeld-info">
+          <h2>Opret bruger</h2>
+        </article>
+        <form id="tilmeldform">
+          <div class="left-column">
+            <div class="form-group">
+              <label for="firstname">Fornavn</label>
+              <input type="text" id="firstname" name="firstname" required />
+              <p class="error-message">Udfyld venligst feltet</p>
+            </div>
+            <div class="form-group">
+              <label for="lastname">Efternavn</label>
+              <input type="text" id="lastname" name="lastname" required />
+              <p class="error-message">Udfyld venligst feltet</p>
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" required />
+              <p class="error-message">Udfyld venligst feltet</p>
+            </div>
+            <div class="form-group">
+              <label for="phonenumber">Telefonnummer</label>
+              <input type="number" id="phonenumber" name="phonenumber" required />
+              <p class="error-message">Udfyld venligst feltet</p>
+            </div>
+          </div>
+          <div class="right-column">
+            <div class="form-group">
+              <label for="password">Adgangskode</label>
+              <input type="password" id="password" name="password" required />
+              <p class="error-message">Udfyld venligst feltet</p>
+            </div>
+            <div class="check-opret-group">
+              <div class="checkbox-group">
+                <label for="terms">
+                  <input type="checkbox" id="terms" name="accept-terms" value="yes" required />
+                  Accepter vilkår
+                </label>
+              </div>
+              <button class="opret-btn">Opret</button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
     <footer>
       <div class="footer-inner">
         <div class="footer-social">
