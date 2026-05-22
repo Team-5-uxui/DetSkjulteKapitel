@@ -109,3 +109,32 @@ h1 {
   font-weight: bold;
   color: var(--primary-btn);
 }
+
+@media (min-width: 800px) {
+  #products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2em;
+    align-items: stretch;
+  }
+
+  .product img {
+    width: 100%;
+    height: 481px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin: 0 auto;
+  }
+  .product {
+    height: 100%;
+  }
+
+  .product a {
+    margin-top: auto;
+  }
+
+  .product p {
+    margin-bottom: 1.5em;
+  }
+}

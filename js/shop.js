@@ -26,10 +26,12 @@ fetch(url, options).then((response) =>
 function showProducts(productsarr) {
   productContainer.innerHTML = "";
   productsarr.forEach((product) => {
-    productContainer.innerHTML += `<img src="${product.billede}" alt="${product.produktnavn}" />
+    productContainer.innerHTML += `<div class="product">
+        <img src="${product.billede}" alt="${product.produktnavn}" />
         <h3>${product.produktnavn}</h3>
         <p>${product.pris} kr.</p>
-        <a href="shopSingleview.html?id=${product.id}">Se produkt</a>`;
+        <a href="shopSingleview.html?id=${product.id}">Se produkt</a>
+      </div>`;
   });
 }
 
@@ -61,7 +63,6 @@ filterLuk.addEventListener("click", () => {
   filterPanel.classList.remove("aktiv");
 });
 
-// ── FILTER KATEGORIER: åbn/luk undermenu ───────
 const filterTitler = document.querySelectorAll(".filter-titel");
 
 filterTitler.forEach((titel) => {
@@ -80,7 +81,6 @@ filterValg.forEach((valg) => {
     const type = valg.dataset.type;
     const filter = valg.dataset.filter;
 
-    // Klik på samme filter fjerner det
     if (aktiveFiltre[type] === filter) {
       aktiveFiltre[type] = null;
       valg.classList.remove("valgt");
