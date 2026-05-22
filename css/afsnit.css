@@ -1,0 +1,22 @@
+.grid-1_1_1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 70%;
+  margin-top: 2.5em;
+  margin-bottom: 4em;
+  padding: 4em;
+  place-self: center;
+  background-color: var(--podcast-card-bg);
+  color: var(--text-inverted);
+  border-radius: 40px;
+}
+
+.grid-1_1_1 img {
+  max-width: 90%;
+}
+
+.playBtn {
+  place-self: end;
+  margin-top: 9em;
+  margin-right: 2.5em;
+}
