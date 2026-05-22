@@ -163,7 +163,6 @@ input {
     outline: 2px solid var(--primary-btn);
     border-color: var(--primary-btn);
   }
-
   .error-message {
     display: block;
   }
