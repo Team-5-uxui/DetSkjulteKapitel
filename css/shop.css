@@ -1,0 +1,111 @@
+#products {
+  padding: 1em 3em;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+}
+
+.product img {
+  width: 100%;
+}
+
+.product h3 {
+  padding: 0.5em 0;
+}
+
+.product p {
+  color: var(--text-color);
+}
+
+.product a {
+  margin: 1em 1em 5em 1em;
+  background: var(--primary-btn);
+  color: var(--text-inverted);
+  text-align: center;
+  padding: 0.5em;
+  border-radius: 50px;
+}
+
+h1 {
+  text-align: center;
+  margin: 1em 0 1em 0;
+}
+
+.filter-wrapper {
+  margin: 0 1em;
+}
+
+.filter-btn {
+  cursor: pointer;
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 0.5em 1.5em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.filter-panel {
+  display: none;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1.5em;
+  margin-top: 0.5em;
+  width: 250px;
+}
+
+.filter-panel.aktiv {
+  display: block;
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+.filter-header p {
+  margin: 0;
+  font-weight: normal;
+}
+
+.filter-header button {
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.filter-titel {
+  cursor: pointer;
+  margin: 0.8em 0;
+}
+
+.filter-titel.aaben {
+  font-weight: bold;
+}
+
+.filter-valg {
+  display: none;
+  margin-left: 1em;
+}
+
+.filter-valg.aaben {
+  display: block;
+}
+
+.filter-valg p {
+  cursor: pointer;
+  padding: 0.3em 0;
+  margin: 0;
+}
+
+.filter-valg p.valgt {
+  font-weight: bold;
+  color: var(--primary-btn);
+}
