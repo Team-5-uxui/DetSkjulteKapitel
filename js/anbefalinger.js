@@ -1,3 +1,5 @@
+
+
 async function hentAlleBoeger() {
   const response = await fetch(
     "https://qbsufmwklabqmadwcgjp.supabase.co/rest/v1/boeger?select=*",
@@ -93,7 +95,9 @@ async function hentAlleBoeger() {
   });
 }
 
-hentAlleBoeger();
+
+
+// hentAlleBoeger();
 
 // AnbefalingerSingleview
 
@@ -119,7 +123,7 @@ async function hentBog() {
   sektion.innerHTML = `
   <div class="bogSingleview">  
   <div>
- <p class="IndividuelAnbefaling">${bog.anbefaler} anbefaler</p> 
+ <p class="IndividuelAnbefaling2">${bog.anbefaler} anbefaler</p> 
  <img src="${bog.billede}" alt="Forside af bogen ${bog.titel}" />
  </div>
  <div>
@@ -158,4 +162,14 @@ async function hentBog() {
   `;
 }
 
-hentBog();
+
+
+// hentBog();
+
+if (document.getElementById("filterToggle")) {
+  hentAlleBoeger();
+}
+
+if (document.getElementById("bogDetalje")) {
+  hentBog();
+}
