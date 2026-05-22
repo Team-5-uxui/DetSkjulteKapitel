@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/anbefalinger.css">
   </head>
   <body>
     <header>
@@ -45,31 +46,93 @@
         <a href="kurv.html">Kurv</a>
       </nav>
     </header>
-    <footer>
-      <div class="footer-inner">
-        <div class="footer-social">
-          <span class="footer-label">Find os</span>
-          <div class="social-icons">
-            <a href="#"><img src="" alt="Instagram" /></a>
-            <a href="#"><img src="" alt="Facebook" /></a>
-            <a href="#"><img src="" alt="TikTok" /></a>
-          </div>
-        </div>
 
+<main>
+
+
+<h2>Anbefalinger</h2>
+
+<div class="filter-wrapper">
+  <button class="filter-btn" id="filterToggle">⇌ Filtrer</button>
+
+  <div class="filter-panel" id="filterPanel">
+    <div class="filter-header">
+      <p>Filtrer</p>
+      <button id="filterLuk">✕</button>
+    </div>
+    <hr />
+
+    <div class="filter-gruppe">
+      <p class="filter-titel" data-target="genreValg">Genre</p>
+      <hr />
+      <div class="filter-valg" id="genreValg">
+        <p data-type="genre" data-filter="Romance">Romance</p>
+        <p data-type="genre" data-filter="Fantasy">Fantasy</p>
+        <p data-type="genre" data-filter="Romantasy">Romantasy</p>
+        <hr />
+      </div>
+    </div>
+
+    <div class="filter-gruppe">
+      <p class="filter-titel" data-target="forfatterValg">Forfatter</p>
+      <hr />
+      <div class="filter-valg" id="forfatterValg">
+        <p data-type="forfatter" data-filter="Elle Kennedy">Elle Kennedy</p>
+        <p data-type="forfatter" data-filter="Lyla Sage">Lyla Sage</p>
+        <p data-type="forfatter" data-filter="Elsie Silver">Elsie Silver</p>
+        <hr />
+      </div>
+    </div>
+
+    <div class="filter-gruppe">
+      <p class="filter-titel" data-target="anbefalerValg">Hvem Anbefaler</p>
+      <hr />
+      <div class="filter-valg" id="anbefalerValg">
+        <p data-type="anbefaler" data-filter="Rikke">Rikke</p>
+        <p data-type="anbefaler" data-filter="Sibel">Sibel</p>
+        <p data-type="anbefaler" data-filter="Daniella">Daniella</p>
+        <hr />
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<section class="grid">
+    
+</section>
+
+
+</main>
+
+   <footer>
+      <div class="footer-inner">
         <a href="#" class="footer-logo">
           <img src="img/Logo.svg" alt="Det Skjulte Kapitel" class="logo-img-footer" />
         </a>
 
-        <div class="footer-listen">
-          <span class="footer-label">Lyt med</span>
-          <div class="social-icons">
-            <a href="#"><img src="" alt="Spotify" /></a>
-            <a href="#"><img src="" alt="Podimo" /></a>
-            <a href="#"><img src="" alt="Apple Music" /></a>
+        <div class="footer-bottom-row">
+          <div class="footer-social">
+            <span class="footer-label">Find os</span>
+            <div class="social-icons">
+              <a href="#"><img src="img/Instagram.svg" alt="Instagram" /></a>
+              <a href="#"><img src="img/Facebook.svg" alt="Facebook" /></a>
+              <a href="#"><img src="img/TikTok.svg" alt="TikTok" /></a>
+            </div>
+          </div>
+
+          <div class="footer-listen">
+            <span class="footer-label">Lyt med</span>
+            <div class="social-icons">
+              <a href="https://open.spotify.com/show/3m8Jab1IPtWVq0r0YH2QnV"><img src="img/Spotify.svg" alt="Spotify" /></a>
+              <a href="https://open.podimo.com/podcast/a7241b3f-1531-4056-aa6a-d502dbbe5295"><img src="img/Podimo.svg" alt="Podimo" /></a>
+              <a href="#"><img src="img/AppleMusic.svg" alt="Apple Music" /></a>
+            </div>
           </div>
         </div>
       </div>
     </footer>
     <script src="js/burger.js"></script>
+    <script src="js/anbefalinger.js"></script>
   </body>
 </html>
