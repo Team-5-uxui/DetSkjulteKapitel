@@ -7,6 +7,11 @@ h2 {
   padding: 2em 0 2em 0;
 }
 
+h1 {
+  place-self: center;
+  padding: 2em 0 2em 0;
+}
+
 .grid-1_1_1 {
   background-color: var(--podcast-card-bg);
   margin: 3em;
@@ -19,16 +24,12 @@ h2 {
   margin: 2em 0 2em 2em;
 }
 
-.margin2{
-
-margin-top: 1em;
+.margin2 {
+  margin-top: 1em;
 }
 
-
-.grid-1_1_1 div h3
-p {
+.grid-1_1_1 div h3 p {
   margin-left: 2em;
-  
 }
 
 .SoMe {
@@ -57,25 +58,36 @@ p {
   max-width: 70%;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
   place-self: center;
+  position: relative;
+  padding: 3em;
 }
+
 
 .IndividuelAnbefaling {
   background-color: var(--podcast-card-bg);
-  color: var(--text-inverted);
-  border-radius: 20px;
-  padding: 1em 3em 1em 3em;
-  position: relative;
-  place-self: center;
-}
-
-.AnbefalingCard a p{
-  text-decoration: none;
-    background-color: var(--primary-btn);
     color: var(--text-inverted);
     border-radius: 20px;
-    place-self: center;
-    padding: 0 3.5em 0 3.5em;
-    margin-top: 2em;
+    place-self: self-start;
+    padding: 0.5em 1em 0.5em 1em;
+    position: absolute;
+    top: 4px;
+}
+
+.AnbefalingCard img {
+  display: grid;
+  max-width: 70%;
+  place-self: center;
+  margin-bottom: 1em;
+}
+
+.AnbefalingCard a p {
+  text-decoration: none;
+  background-color: var(--primary-btn);
+  color: var(--text-inverted);
+  border-radius: 20px;
+  place-self: center;
+  padding: 0 3.5em 0 3.5em;
+  margin-top: 2em;
 }
 
 .filter-wrapper {
@@ -154,6 +166,125 @@ p {
   font-weight: bold;
   color: var(--primary-btn);
 }
+
+/* AnbefalingerSingleview */
+
+.bogSingleview img {
+  display: grid;
+  max-width: 70%;
+  place-self: center;
+  
+}
+.IndividuelAnbefaling2 {
+     background-color: var(--podcast-card-bg);
+  color: var(--text-inverted);
+  border-radius: 20px;
+  position: relative;
+  margin-right: 18em;
+  margin-top: 3em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  place-self: center;
+}
+
+.OmBogen {
+  margin: 0 4em 4em 4em;
+}
+
+.personligAnmeldelse {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin: 0 3em 0 1em;
+}
+
+.personligAnmeldelse img {
+  max-width: 70%;
+}
+
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-bottom: 2em;
+  margin-left: 2em;
+  background-color: var(--primary-btn);
+  color: var(--text-inverted);
+  border-radius: 40px;
+  padding: 1em;
+  max-width: 85%;
+  place-self: center;
+}
+
+.grid_1-1 img {
+  place-self: end;
+  margin-right: 2em;
+}
+
+.chatCard {
+  background-color: var(--primary-btn);
+  max-width: 80%;
+  place-self: center;
+  margin-top: 4em;
+  margin-bottom: 4em;
+  border-radius: 40px;
+  color: var(--text-inverted);
+}
+
+.personKommentar {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.personKommentar img {
+  max-width: 50%;
+  margin-left: 2em;
+}
+
+.kommentarTekst {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-right: 2em;
+}
+
+.kommentarTekst div p {
+  margin-bottom: 2em;
+}
+
+.skrivKommentar {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-bottom: 2em;
+  align-items: center;
+}
+
+.skrivKommentar img {
+  margin-left: 1em;
+}
+
+textarea {
+  border-radius: 20px;
+  background-color: var(--book-card-bg);
+  resize: none;
+  border: none;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.kommentarer {
+  place-self: center;
+  margin-left: 3em;
+}
+
+textarea::placeholder {
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+textarea {
+  width: 250px;
+  height: 25px;
+}
+
 @media (min-width: 768px) {
   img {
     max-width: 100%;
@@ -181,10 +312,6 @@ p {
   .grid-1_1_1 img {
     max-width: 90%;
   }
-
-  /* .margin {
-    margin-top: 1em;
-  } */
 
   .SoMe {
     padding-left: 3em;
@@ -233,11 +360,78 @@ p {
     place-self: center;
   }
 
-  .IndividuelAnbefaling {
-    background-color: var(--podcast-card-bg);
-    color: var(--text-inverted);
-    border-radius: 20px;
-    place-self: self-start;
-    padding: 0 1em 0 1em;
+
+  /* AnbefalingerSingleview */
+
+  .IndividuelAnbefaling2 {
+    position: relative;
+    margin-top: 2em;
+    margin-left: em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .bogSingleview img {
+    display: grid;
+    max-width: 60%;
+    place-self: center;
+   
+  }
+
+  .bogSingleview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 4em;
+  }
+  h1 {
+    padding: 0;
+    margin-top: 3em;
+    place-self: start;
+  }
+
+  .OmBogen {
+    margin: 0 8em 0 0;
+  }
+
+  .personligAnmeldelse {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: none;
+    margin-top: 9em;
+  }
+
+  .chatCard {
+    max-width: 70%;
+    margin-top: 8em;
+  }
+
+  .chatCard h2 {
+    margin: 0;
+  }
+
+  .kommentarTekst img {
+    max-width: 40%;
+    margin-bottom: 2em;
+    place-self: center;
+  }
+
+  .kommentarTekst p {
+    margin-right: 2em;
+  }
+  .kommentarTekst h3 {
+    margin-top: 0.5em;
+  }
+
+  textarea {
+    width: 500px;
+    height: 50px;
+    padding-top: 13px;
+    font-size: larger;
+  }
+
+  .kommentarer {
+    margin-left: 14em;
   }
 }
