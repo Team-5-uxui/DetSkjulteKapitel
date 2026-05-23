@@ -139,6 +139,15 @@ h1 {
   .product p {
     margin-bottom: 1.5em;
   }
+
+  h1 {
+    text-align: left;
+    margin-left: 1em;
+  }
+
+  .filter-btn {
+    margin-left: 2em;
+  }
 }
 
 /* Singleview */
