@@ -1,0 +1,291 @@
+main {
+  margin: 2em 2em;
+  justify-items: center;
+  h1 {
+    padding-bottom: 1em;
+  }
+}
+#login-form,
+#tilmeld-form,
+#kob-form {
+  background-color: var(--forms-bg);
+  border-radius: 20px;
+  padding: 1.5em 2.5em;
+  margin-bottom: 1.5em;
+}
+.form-group {
+  padding: 0.5rem 0;
+  gap: 0.3rem;
+  display: flex;
+  flex-direction: column;
+}
+.opret-btn,
+.login-btn {
+  border: none;
+  border-radius: 20px;
+  background-color: var(--primary-btn);
+  color: var(--text-inverted);
+}
+hr {
+  width: 90%;
+  border: none;
+  border-top: 1px solid var(--linje);
+  margin: 3rem 0;
+}
+input {
+  font-family: "Helvetica Neue";
+  font-weight: 300;
+}
+input[type="checkbox"] {
+  accent-color: var(--primary-btn);
+}
+.radio-group {
+  display: flex;
+}
+
+.radio-option {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border: 1px solid var(--primary-btn);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.radio-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid var(--primary-btn);
+  flex-shrink: 0;
+}
+
+.radio-circle.filled {
+  border: 2px solid var(--primary-btn);
+  background: radial-gradient(circle, #7c3db8 45%, white 46%);
+}
+.radio-option.radio-circle.filled {
+  border: 2px solid var(--primary-btn);
+}
+.kob-btn {
+  border-radius: 20px;
+  background-color: var(--primary-btn);
+  color: var(--text-inverted);
+  border: none;
+}
+.betaling-wrap {
+  margin-top: 2.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.ordreoversigt-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  .product-short {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight:;
+  .bold {
+    font-weight: 500;
+  }
+}
+/* Desktop */
+@media (width>850px) {
+  main {
+    h1 {
+      justify-self: start;
+    }
+  }
+  #login-form {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+  }
+  #tilmeld-form {
+    width: 800px;
+  }
+  #tilmeldform {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .left-column,
+  .right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .right-column {
+    justify-content: space-between;
+    .check-opret-group {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  .error-message {
+    font-family: "Helvetica Neue";
+    font-weight: 300;
+    font-size: 0.9rem;
+  }
+  .form-group {
+    input {
+      width: 430 px;
+      height: 57px;
+      border-radius: 20px;
+      border: none;
+      padding: 1em;
+      font-size: 1rem;
+    }
+  }
+  .opret-btn {
+    align-self: flex-end;
+    padding: 0.3rem 1.2rem;
+  }
+  .login-btn {
+    align-self: center;
+    padding: 0.3rem 1rem;
+  }
+  #kobform {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1rem;
+    column-gap: 2em;
+    .form-group:last-of-type {
+      grid-column: 1/ -1;
+    }
+  }
+  #kob-form {
+    width: 80%;
+    padding: 2em 2.5em;
+
+    h2 {
+      margin-bottom: 1em;
+    }
+  }
+  .betaling-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-start;
+    margin-left: 10%;
+  }
+  .radio-group {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5em;
+  }
+  .kob-btn {
+    width: 366px;
+    height: 75px;
+  }
+  .ordreoversigt-section,
+  .total-section {
+    width: 80%;
+  }
+}
+
+/* Mobil */
+@media (max-width: 850px) {
+  main {
+    margin: 2em 4em;
+    h1 {
+      padding-bottom: 1em;
+    }
+  }
+  #login-form,
+  #tilmeld-form,
+  #kob-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    h2 {
+      align-self: center;
+    }
+  }
+  .ordreoversigt-section,
+  .total-section {
+    width: 350px;
+  }
+  #loginform,
+  #tilmeldform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .form-group {
+    input {
+      border-radius: 20px;
+      width: 250px;
+      height: 28px;
+      padding: 1em;
+      border: none;
+      font-size: 0.8rem;
+    }
+    .error-message {
+      font-family: "Helvetica Neue";
+      font-weight: 300;
+      font-size: 0.8rem;
+    }
+  }
+  .login-btn,
+  .opret-btn {
+    padding: 0.3rem 1rem;
+  }
+  #kob-form h2 {
+    padding-bottom: 0.8rem;
+  }
+  .check-opret-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .opret-btn {
+    align-self: center;
+  }
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    align-self: flex-start;
+    margin-bottom: 1.5em;
+  }
+  .radio-group {
+    gap: 1.2em;
+  }
+  .kob-btn {
+    width: 350px;
+    height: 63px;
+    margin: 0;
+  }
+}
+/* Valideringsregler */
+.error-message {
+  display: none;
+}
+.form-group:has(:required) {
+  label::after {
+    content: " *";
+    color: var(--podcast-card-bg);
+  }
+}
+.form-group:has(:user-invalid) {
+  input {
+    outline: 2px solid var(--primary-btn);
+    border-color: var(--primary-btn);
+  }
+  .error-message {
+    display: block;
+  }
+}
