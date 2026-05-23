@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/forms.css" />
   </head>
   <body>
     <header>
@@ -45,6 +46,92 @@
         <a href="kurv.html">Kurv</a>
       </nav>
     </header>
+    <main>
+      <h1>Betaling</h1>
+      <section id="kob-form">
+        <h2> Leverings oplysninger</h2>
+        <form id="kobform">
+          <div class="form-group">
+            <label for="firstname">Fornavn</label>
+            <input type="text" id="firstname" name="firstname" required />
+            <p class="error-message">Udfyld venligst feltet</p>
+          </div>
+          <div class="form-group">
+            <label for="lastname">Efternavn</label>
+            <input type="text" name="lastname" id="lastname" required />
+            <p class="error-message">Udfyld venigst feltet</p>
+          </div>
+          <div class="form-group right-column">
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" required />
+            <p class="error-message">Udfyld venligst feltet</p>
+          </div>
+          <div class="form-group right-column">
+            <label for="phonenumber">Telefonnummer</label>
+            <input type="number" id="phonenumber" name="phonenumber" required />
+            <p class="error-message">Udfyld venligst feltet</p>
+          </div>
+          <div class="form-group">
+            <label for="address">Adresse</label>
+            <input type="text" id="address" name="address" required />
+            <p class="error-message">Udfyld venligst feltet</p>
+          </div>
+        </form>
+      </section>
+      <section class="betaling-wrap">
+        
+  <h3>Vælg betalingsmetode</h3>
+
+  <div class="radio-group" role="radiogroup">
+    <label class="radio-option" onclick="selectPayment('kort')">
+      <div class="radio-circle" id="circle-kort"></div>
+      Kort
+    </label>
+    <label class="radio-option" onclick="selectPayment('mobilepay')">
+      <div class="radio-circle" id="circle-mobilepay"></div>
+      MobilePay
+    </label>
+  </div>
+
+  <div class="checkbox-group" >
+    <label for="terms">
+    <input type="checkbox" id="terms" name="accept-terms" value="yes" required>
+    Jeg accepterer handelsbetingelserne
+  </label>
+  </div>
+
+  <button class="kob-btn" onclick="handleKøb()">
+    Gennemfør køb →
+  </button>
+</div>
+      </section>
+      <hr>
+      <section class="ordreoversigt-section">
+        <h3>Ordreoversigt</h3>
+        <div class="product-short">
+        <span>Produktnavn x 1</span>
+        <span>--- kr.</span>
+</div>
+ <div class="product-short">
+        <span>Produktnavn x 1</span>
+        <span>--- kr.</span>
+</div>
+ <div class="product-short">
+        <span>Produktnavn x 1</span>
+        <span>--- kr.</span>
+</div>
+ <div class="product-short">
+        <span>Fragt</span>
+        <span>--- kr.</span>
+</div></section>
+<hr>
+<section class="total-section">
+<div class="total">
+  <span class="bold">Samlet pris</span>
+  <span>--- kr.</span>
+</div>
+   </section>   
+    </main>
     <footer>
       <div class="footer-inner">
         <div class="footer-social">
@@ -71,5 +158,6 @@
       </div>
     </footer>
     <script src="js/burger.js"></script>
+    <script src="js/koeb.js"></script>
   </body>
 </html>
