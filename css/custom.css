@@ -54,8 +54,7 @@ p,
 .login-btn,
 .opret-btn,
 label,
-span {
-.btn {
+span .btn {
   font-family: "Helvetica Neue";
   font-weight: 300;
   font-size: 1.25rem;
@@ -100,15 +99,16 @@ nav {
   .opret-btn,
   label,
   span {
-  .btn {
-    font-family: "Helvetica Neue";
-    font-weight: 300;
-    font-size: 1rem;
-  }
+    .btn {
+      font-family: "Helvetica Neue";
+      font-weight: 300;
+      font-size: 1rem;
+    }
 
-  nav {
-    font-family: "Helvetica Neue";
-    font-weight: 300;
-    font-size: 1.375rem;
+    nav {
+      font-family: "Helvetica Neue";
+      font-weight: 300;
+      font-size: 1.375rem;
+    }
   }
 }
