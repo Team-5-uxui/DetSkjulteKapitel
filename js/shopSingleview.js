@@ -25,19 +25,21 @@ fetch(enkeltUrl, options).then((response) =>
 fetch(alleUrl, options).then((response) =>
   response.json().then((data) => {
     const andreProdukter = data.filter((p) => p.id !== parseInt(id));
-    const toStyk = andreProdukter.sort(() => Math.random() - 0.5).slice(0, 2);
-    showKøbOgsaa(toStyk);
+    const treStyk = andreProdukter.sort(() => Math.random() - 0.5).slice(0, 3);
+    showKøbOgsaa(treStyk);
   }),
 );
 
 function showProduct(product) {
   productContainer.innerHTML = `
     <img src="${product.billede}" alt="${product.produktnavn}" />
+    <div class="product-info">
     <h1>${product.produktnavn}</h1>
     <p class="beskrivelse">${product.beskrivelse}</p>
     <p class="pris">${product.pris} kr.</p>
     <p class="storrelse">Størrelse: ${product.storrelse}</p>
-    <a href="" class="btn">Læg i kurv</a>
+    <a href="" class="btn btn-singleview">Læg i kurv</a>
+    </div>
   `;
 }
 
