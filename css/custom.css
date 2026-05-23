@@ -52,7 +52,8 @@ h5 {
 p,
 .login-btn,
 .opret-btn,
-label {
+label,
+.btn {
   font-family: "Helvetica Neue";
   font-weight: 300;
   font-size: 1.25rem;
@@ -94,7 +95,8 @@ nav {
   p,
   .login-btn,
   .opret-btn,
-  label {
+  label,
+  .btn {
     font-family: "Helvetica Neue";
     font-weight: 300;
     font-size: 1rem;
