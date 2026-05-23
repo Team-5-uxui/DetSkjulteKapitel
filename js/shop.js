@@ -1,6 +1,6 @@
 "use strict";
 
-const productContainer = document.querySelector("#products");
+const productsContainer = document.querySelector("#products");
 
 const options = {
   headers: {
@@ -24,13 +24,13 @@ fetch(url, options).then((response) =>
 );
 
 function showProducts(productsarr) {
-  productContainer.innerHTML = "";
+  productsContainer.innerHTML = "";
   productsarr.forEach((product) => {
-    productContainer.innerHTML += `<div class="product">
+    productsContainer.innerHTML += `<div class="product">
         <img src="${product.billede}" alt="${product.produktnavn}" />
         <h3>${product.produktnavn}</h3>
         <p>${product.pris} kr.</p>
-        <a href="shopSingleview.html?id=${product.id}">Se produkt</a>
+        <a href="shopSingleview.html?id=${product.id}" class="btn">Se produkt</a>
       </div>`;
   });
 }
@@ -85,7 +85,6 @@ filterValg.forEach((valg) => {
       aktiveFiltre[type] = null;
       valg.classList.remove("valgt");
     } else {
-      // Fjern valgt fra andre i samme gruppe
       document.querySelectorAll(`[data-type="${type}"]`).forEach((el) => el.classList.remove("valgt"));
 
       aktiveFiltre[type] = filter;

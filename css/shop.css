@@ -19,13 +19,15 @@
   color: var(--text-color);
 }
 
-.product a {
-  margin: 1em 1em 5em 1em;
+.btn {
+  margin: 1em 0 5em 0;
   background: var(--primary-btn);
   color: var(--text-inverted);
   text-align: center;
   padding: 0.5em;
   border-radius: 50px;
+  width: 100%;
+  display: block;
 }
 
 h1 {
@@ -137,4 +139,70 @@ h1 {
   .product p {
     margin-bottom: 1.5em;
   }
+}
+
+/* Singleview */
+
+#product {
+  margin: 2em;
+}
+
+#product img {
+  width: 350px;
+  height: 440px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  margin: 0 auto;
+}
+
+#product h1 {
+  text-align: left;
+  margin: 0.5em 0;
+}
+
+.beskrivelse {
+  color: var(--text-color);
+  margin: 0.5em 0;
+}
+
+.pris {
+  font-style: italic;
+  margin-top: 2em;
+}
+
+.storrelse {
+  border: 1px solid var(--text-color);
+  text-align: center;
+  border-radius: 20px;
+  padding: 0.5em;
+  margin: 1em 0;
+}
+
+#koeb-ogsaa {
+  margin: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+#koeb-ogsaa img {
+  width: 100%;
+}
+
+#koeb-ogsaa h3 {
+  padding: 0.5em 0;
+}
+
+#koeb-ogsaa p {
+  color: var(--text-color);
+}
+
+h2 {
+  text-align: center;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #b0acac;
+  margin: 2em;
 }
