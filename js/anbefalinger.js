@@ -127,7 +127,7 @@ async function hentBog() {
  <img src="${bog.billede}" alt="Forside af bogen ${bog.titel}" />
  </div>
  <div>
-    <h1>${bog.titel}</h1>
+    <h1 class="h1">${bog.titel}</h1>
     <div class="OmBogen">
     <h3>${bog.forfatter}</h3>
     <p>${bog.beskrivelse}</p>
