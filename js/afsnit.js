@@ -30,9 +30,9 @@ function visAfsnit(data) {
         <div class=afsnit-info2>
           <h3>${afsnit.titel}</h3>
           <p>${afsnit.beskrivelse.substring(0, 50)}...</p>
-          <p>${afsnit.laengde}
+          <p>${afsnit.laengde}</p>
         </div>
-        <div class=PlayBtn2><a href="afsnitSingeview.html?id${afsnit.id}"><img src="img/PlayBtn.svg" alt="" /></a></div>
+        <div class=PlayBtn2><a href="afsnitSingleview.html?id=${afsnit.id}"><img src="img/PlayBtn.svg" alt="" /></a></div>
     </section>
       `;
 
