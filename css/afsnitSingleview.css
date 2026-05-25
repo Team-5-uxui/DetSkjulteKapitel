@@ -7,15 +7,15 @@ h2 {
   text-align: center;
 }
 
-/* Afsnit */
+/* Afsnit singleview */
 /* Desktop */
 @media (width>768px) {
-  .afsnit-kort {
+  .single-afsnit {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 2.5em;
     margin-bottom: 4em;
-    padding: 4em;
+    padding: 3em;
     place-self: center;
     background-color: var(--podcast-card-bg);
     color: var(--text-inverted);
@@ -24,8 +24,16 @@ h2 {
     margin-right: 5em;
   }
 
-  .afsnit-kort img {
+  .single-afsnit img {
     max-width: 100%;
+  }
+
+  .afsnit-left2 img {
+    max-width: 70%;
+  }
+
+  .afsnit-info1 {
+    margin-top: 1em;
   }
 
   .afsnit-ikoner {
@@ -34,111 +42,6 @@ h2 {
     margin-left: 2.5em;
     padding-bottom: 2em;
   }
-
-  .afsnit-ikoner img {
-    max-width: 110%;
-  }
-
-  .playBtn1 {
-    place-self: end;
-    margin-top: 9em;
-    margin-right: 2.5em;
-  }
-
-  .afsnit-beskrivelse {
-    margin-top: 1em;
-  }
-
-  .afsnit {
-    margin: 3em;
-    margin-left: 10em;
-    margin-right: 10em;
-  }
-
-  .afsnit-kolonne {
-    display: flex;
-    align-items: center;
-    background: var(--podcast-card-bg);
-    padding: 3em;
-    border-radius: 12px;
-    margin-bottom: 12px;
-    color: white;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    height: 10em;
-  }
-
-  .afsnit-left img {
-    max-width: 70%;
-    border-radius: 8px;
-  }
-
-  .afsnit-info2 {
-    flex: 2;
-  }
-
-  .afsnit-kort img {
-    max-width: 100%;
-  }
-
-  .afsnit-ikoner {
-    display: flex;
-    gap: 1em;
-    margin-left: 2.5em;
-    padding-bottom: 2em;
-  }
-
-  .afsnit-ikoner img {
-    max-width: 110%;
-  }
-
-  .playBtn1 {
-    place-self: end;
-    margin-top: 9em;
-    margin-right: 2.5em;
-  }
-
-  .afsnit-beskrivelse {
-    margin-top: 1em;
-  }
-
-  .afsnit {
-    margin: 3em;
-    margin-left: 10em;
-    margin-right: 10em;
-  }
-
-  .afsnit-kolonne {
-    display: flex;
-    align-items: center;
-    background: var(--podcast-card-bg);
-    padding: 3em;
-    border-radius: 12px;
-    margin-bottom: 12px;
-    color: white;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    height: 10em;
-  }
-
-  .afsnit-left img {
-    max-width: 70%;
-    border-radius: 8px;
-  }
-
-  .afsnit-info2 {
-    flex: 2;
-  }
-
-  /* .PlayBtn2 img {
-    max-width: 80%;
-  } */
 
   .PlayBtn2 {
     text-align: center;
@@ -146,9 +49,28 @@ h2 {
     margin-top: 2em;
     margin-right: 2.5em;
   }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    background: var(--podcast-card-bg);
+    padding: 3em;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    color: white;
+    margin: 3em;
+    margin-left: 10em;
+    margin-right: 10em;
+  }
+
+  .afsnit-left img {
+    max-width: 70%;
+    border-radius: 8px;
+  }
 }
 
-/* Mobil */
+/* Mobile */
 @media (max-width: 768px) {
   .afsnit-kolonne {
     display: flex;
@@ -160,7 +82,7 @@ h2 {
     color: white;
   }
 
-  .afsnit-kort {
+  .single-afsnit {
     background: var(--podcast-card-bg);
     color: white;
     padding: 20px;
@@ -175,23 +97,23 @@ h2 {
     gap: 16px;
   }
 
-  .afsnit-cover {
+  .cover {
     max-width: 100%;
     border-radius: 12px;
     justify-self: center;
     padding-top: 1em;
   }
 
-  .afsnit-info1 h3 {
+  .single-afsnit h3 {
     margin-bottom: 6px;
   }
 
-  .afsnit-info1 p {
+  .single-afsnit p {
     opacity: 0.9;
     line-height: 1.4;
   }
 
-  .afsnit-beskrivelse {
+  .episode-info {
     margin-top: 1em;
     opacity: 0.85;
   }
@@ -206,30 +128,6 @@ h2 {
   .afsnit-ikoner img {
     max-width: 100%;
     border-radius: 50%;
-  }
-
-  .playBtn1 {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-  }
-
-  .playBtn1 img {
-    max-width: 100%;
-  }
-
-  .afsnit {
-    margin: 3em;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-  }
-
-  .afsnit-left img {
-    max-width: 100%;
-    border-radius: 8px;
   }
 
   .afsnit-info2 {
