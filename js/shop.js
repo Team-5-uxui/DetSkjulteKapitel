@@ -25,6 +25,10 @@ fetch(url, options).then((response) =>
 
 function showProducts(productsarr) {
   productsContainer.innerHTML = "";
+  if (productsarr.length === 0) {
+    productsContainer.innerHTML = "<p>Ingen produkter matcher dit filter.</p>";
+    return;
+  }
   productsarr.forEach((product) => {
     productsContainer.innerHTML += `<div class="product">
         <img src="${product.billede}" alt="${product.produktnavn}" />
@@ -36,7 +40,7 @@ function showProducts(productsarr) {
 }
 
 function filterProdukter() {
-  let filtrerede = alleeProdukter;
+  let filtrerede = alleProdukter;
 
   if (aktiveFiltre.kategori) {
     filtrerede = filtrerede.filter((p) => p.kategori === aktiveFiltre.kategori);
@@ -55,44 +59,61 @@ const filterToggle = document.querySelector("#filterToggle");
 const filterPanel = document.querySelector("#filterPanel");
 const filterLuk = document.querySelector("#filterLuk");
 
-filterToggle.addEventListener("click", () => {
-  filterPanel.classList.toggle("aktiv");
+document.getElementById("filterToggle").addEventListener("click", () => {
+  document.getElementById("filterPanel").classList.toggle("aktiv");
 });
 
-filterLuk.addEventListener("click", () => {
-  filterPanel.classList.remove("aktiv");
+document.getElementById("filterLuk").addEventListener("click", () => {
+  document.getElementById("filterPanel").classList.remove("aktiv");
 });
 
-const filterTitler = document.querySelectorAll(".filter-titel");
-
-filterTitler.forEach((titel) => {
-  titel.addEventListener("click", () => {
-    const targetId = titel.dataset.target;
-    const valg = document.querySelector("#" + targetId);
-    titel.classList.toggle("aaben");
-    valg.classList.toggle("aaben");
+document.querySelectorAll(".filter-alle").forEach((el) => {
+  el.addEventListener("click", () => {
+    aktiveFiltre = {
+      kategori: null,
+      storrelse: null,
+      farve: null,
+    };
+    showProducts(alleProdukter);
+    document.querySelectorAll("[data-filter]").forEach((e) => e.classList.remove("valgt"));
+    document.getElementById("filterPanel").classList.remove("aktiv");
   });
 });
 
-const filterValg = document.querySelectorAll(".filter-valg p");
+document.querySelectorAll(".filter-titel").forEach((titel) => {
+  titel.addEventListener("click", () => {
+    const targetId = titel.dataset.target;
+    const valg = document.getElementById(targetId);
 
-filterValg.forEach((valg) => {
-  valg.addEventListener("click", () => {
-    const type = valg.dataset.type;
-    const filter = valg.dataset.filter;
+    document.querySelectorAll(".filter-valg").forEach((v) => {
+      if (v.id !== targetId) v.classList.remove("aaben");
+    });
+    document.querySelectorAll(".filter-titel").forEach((t) => {
+      if (t !== titel) t.classList.remove("aaben");
+    });
 
-    if (aktiveFiltre[type] === filter) {
+    valg.classList.toggle("aaben");
+    titel.classList.toggle("aaben");
+  });
+});
+
+document.querySelectorAll(".filter-valg p").forEach((el) => {
+  el.addEventListener("click", () => {
+    const type = el.dataset.type;
+    const vaerdi = el.dataset.filter;
+
+    if (vaerdi === "alle") return;
+
+    if (aktiveFiltre[type] === vaerdi) {
       aktiveFiltre[type] = null;
-      valg.classList.remove("valgt");
+      el.classList.remove("valgt");
     } else {
-      document.querySelectorAll(`[data-type="${type}"]`).forEach((el) => el.classList.remove("valgt"));
-
-      aktiveFiltre[type] = filter;
-      valg.classList.add("valgt");
+      document.querySelectorAll(`[data-type="${type}"]`).forEach((e) => e.classList.remove("valgt"));
+      aktiveFiltre[type] = vaerdi;
+      el.classList.add("valgt");
     }
 
     filterProdukter();
+    document.getElementById("filterPanel").classList.remove("aktiv");
   });
 });
-
-getProducts();
