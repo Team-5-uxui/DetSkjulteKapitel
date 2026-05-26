@@ -257,4 +257,9 @@ footer {
   .social-icons {
     gap: 4px;
   }
+
+  .mobile-menu a:hover {
+    background: var(--om-os-card-bg);
+    color: var(--text-inverted);
+  }
 }
