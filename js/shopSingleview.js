@@ -38,9 +38,37 @@ function showProduct(product) {
     <p class="beskrivelse">${product.beskrivelse}</p>
     <p class="pris">${product.pris} kr.</p>
     <p class="storrelse">Størrelse: ${product.storrelse}</p>
-    <a href="" class="btn btn-singleview">Læg i kurv</a>
+    <button class="btn btn-singleview" id="tilKurvBtn">Læg i kurv</button>
     </div>
   `;
+
+  document.querySelector("#tilKurvBtn").addEventListener("click", () => {
+    tilføjTilKurv(product);
+  });
+}
+
+function getKurv() {
+  return JSON.parse(localStorage.getItem("kurv")) || [];
+}
+
+function tilføjTilKurv(product) {
+  const kurv = getKurv();
+
+  const eksisterende = kurv.find((p) => p.id === product.id);
+
+  if (eksisterende) {
+    eksisterende.antal++;
+  } else {
+    kurv.push({ ...product, antal: 1 });
+  }
+
+  localStorage.setItem("kurv", JSON.stringify(kurv));
+
+  const knap = document.querySelector("#tilKurvBtn");
+  knap.textContent = "Tilføjet! ✓";
+  setTimeout(() => {
+    knap.textContent = "Læg i kurv";
+  }, 1500);
 }
 
 function showKøbOgsaa(produkter) {

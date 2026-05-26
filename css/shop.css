@@ -28,6 +28,11 @@
   border-radius: 50px;
   width: 100%;
   display: block;
+  border: none;
+}
+
+.btn-singleview {
+  width: 100%;
 }
 
 h1 {
@@ -236,7 +241,7 @@ hr {
   }
 
   .btn-singleview {
-    width: auto;
+    width: 100%;
   }
 
   .storrelse {
