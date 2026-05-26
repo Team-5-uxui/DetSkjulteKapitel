@@ -166,6 +166,11 @@ background-color: var(--podcast-card-bg);
   color: var(--primary-btn);
 }
 
+.filter-alle {
+  cursor: pointer;
+  margin: 0.8em 0;
+}
+
 /* AnbefalingerSingleview */
 
 .bogSingleview img {
@@ -296,7 +301,7 @@ textarea {
   }
 
   h1{
-    margin: 0 0 2em 2em;
+    margin: 0 0 1em 2em;
   }
 
   .h1{
@@ -394,7 +399,7 @@ textarea {
   }
   h1 {
     padding: 0;
-    margin-top: 3em;
+    margin-top: 1em;
     place-self: start;
   }
 
@@ -442,10 +447,5 @@ textarea {
     margin-left: 14em;
   }
 
-  .filtrerKnap{
-    display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 5em;
-}
+ 
 }
