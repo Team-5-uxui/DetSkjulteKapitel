@@ -1,5 +1,3 @@
-
-
 async function hentAlleBoeger() {
   const response = await fetch(
     "https://qbsufmwklabqmadwcgjp.supabase.co/rest/v1/boeger?select=*",
@@ -42,6 +40,7 @@ async function hentAlleBoeger() {
 
   visBoeger(boeger);
 
+  // Åbn/luk filter panel
   document.getElementById("filterToggle").addEventListener("click", () => {
     document.getElementById("filterPanel").classList.toggle("aktiv");
   });
@@ -50,6 +49,17 @@ async function hentAlleBoeger() {
     document.getElementById("filterPanel").classList.remove("aktiv");
   });
 
+  // Alle knappen
+  document.querySelectorAll(".filter-alle").forEach((el) => {
+    el.addEventListener("click", () => {
+      aktivtFilter = { type: null, vaerdi: null };
+      visBoeger(boeger);
+      document.querySelectorAll("[data-filter]").forEach(e => e.classList.remove("valgt"));
+      document.getElementById("filterPanel").classList.remove("aktiv");
+    });
+  });
+
+  // Åbn/luk hver kategori
   document.querySelectorAll(".filter-titel").forEach((titel) => {
     titel.addEventListener("click", () => {
       const targetId = titel.dataset.target;
@@ -67,26 +77,26 @@ async function hentAlleBoeger() {
     });
   });
 
+  // Filtrer
   document.querySelectorAll("[data-filter]").forEach((el) => {
     el.addEventListener("click", () => {
       const type = el.dataset.type;
       const vaerdi = el.dataset.filter;
 
+      // Ignorer "alle" her - det håndteres af filter-alle
+      if (vaerdi === "alle") return;
+
       if (aktivtFilter.type === type && aktivtFilter.vaerdi === vaerdi) {
         aktivtFilter = { type: null, vaerdi: null };
         visBoeger(boeger);
-        document
-          .querySelectorAll("[data-filter]")
-          .forEach((e) => e.classList.remove("valgt"));
+        document.querySelectorAll("[data-filter]").forEach(e => e.classList.remove("valgt"));
       } else {
         aktivtFilter = { type, vaerdi };
         const filtreret = boeger.filter(
           (bog) => bog[type] && bog[type].trim() === vaerdi,
         );
         visBoeger(filtreret);
-        document
-          .querySelectorAll("[data-filter]")
-          .forEach((e) => e.classList.remove("valgt"));
+        document.querySelectorAll("[data-filter]").forEach(e => e.classList.remove("valgt"));
         el.classList.add("valgt");
       }
 
@@ -95,12 +105,7 @@ async function hentAlleBoeger() {
   });
 }
 
-
-
-// hentAlleBoeger();
-
 // AnbefalingerSingleview
-
 async function hentBog() {
   const params = new URLSearchParams(window.location.search);
   const id = params.get("id");
@@ -122,49 +127,44 @@ async function hentBog() {
 
   sektion.innerHTML = `
   <div class="bogSingleview">  
-  <div>
- <p class="IndividuelAnbefaling2">${bog.anbefaler} anbefaler</p> 
- <img src="${bog.billede}" alt="Forside af bogen ${bog.titel}" />
- </div>
- <div>
-    <h1 class="h1">${bog.titel}</h1>
-    <div class="OmBogen">
-    <h3>${bog.forfatter}</h3>
-    <p>${bog.beskrivelse}</p>
-     </div>
-     </div>
+    <div>
+      <p class="IndividuelAnbefaling2">${bog.anbefaler} anbefaler</p> 
+      <img src="${bog.billede}" alt="Forside af bogen ${bog.titel}" />
     </div>
+    <div>
+      <h1 class="h1">${bog.titel}</h1>
+      <div class="OmBogen">
+        <h3>${bog.forfatter}</h3>
+        <p>${bog.beskrivelse}</p>
+      </div>
+    </div>
+  </div>
 
-
-    <div class="personligAnmeldelse">
+  <div class="personligAnmeldelse">
     <div class="grid_1-1">
-     <img src="img/FrejaRund.webp" alt="">
-     <div>
-     <h3>Freja</h3>
-    <p>${bog.sibel}</p>
+      <img src="img/FrejaRund.webp" alt="">
+      <div>
+        <h3>Freja</h3>
+        <p>${bog.sibel}</p>
+      </div>
     </div>
-</div>
-<div class="grid_1-1">
-     <img src="img/DaniellaRund.webp" alt="">
-     <div>
-     <h3>Daniella</h3>
-    <p>${bog.daniella}</p>
+    <div class="grid_1-1">
+      <img src="img/DaniellaRund.webp" alt="">
+      <div>
+        <h3>Daniella</h3>
+        <p>${bog.daniella}</p>
+      </div>
     </div>
-</div>
-<div class="grid_1-1">
-     <img src="img/LauraRund.webp" alt="">
-     <div>
-     <h3>Laura</h3>
-    <p>${bog.rikke}</p>
+    <div class="grid_1-1">
+      <img src="img/LauraRund.webp" alt="">
+      <div>
+        <h3>Laura</h3>
+        <p>${bog.rikke}</p>
+      </div>
     </div>
-    </div>
-    </div>
+  </div>
   `;
 }
-
-
-
-// hentBog();
 
 if (document.getElementById("filterToggle")) {
   hentAlleBoeger();
