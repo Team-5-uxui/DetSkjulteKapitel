@@ -145,7 +145,7 @@ async function hentBog() {
       <img src="img/FrejaRund.webp" alt="">
       <div>
         <h3>Freja</h3>
-        <p>${bog.sibel}</p>
+        <p>${bog.freja}</p>
       </div>
     </div>
     <div class="grid_1-1">
@@ -159,7 +159,7 @@ async function hentBog() {
       <img src="img/LauraRund.webp" alt="">
       <div>
         <h3>Laura</h3>
-        <p>${bog.rikke}</p>
+        <p>${bog.laura}</p>
       </div>
     </div>
   </div>
