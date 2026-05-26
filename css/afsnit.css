@@ -105,41 +105,6 @@ h2 {
     margin-top: 1em;
   }
 
-  .afsnit {
-    margin: 3em;
-    margin-left: 10em;
-    margin-right: 10em;
-  }
-
-  .afsnit-kolonne {
-    display: flex;
-    align-items: center;
-    background: var(--podcast-card-bg);
-    padding: 3em;
-    border-radius: 12px;
-    margin-bottom: 12px;
-    color: white;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    height: 10em;
-  }
-
-  .afsnit-left img {
-    max-width: 70%;
-    border-radius: 8px;
-  }
-
-  .afsnit-info2 {
-    flex: 2;
-  }
-
-  /* .PlayBtn2 img {
-    max-width: 80%;
-  } */
-
   .PlayBtn2 {
     text-align: center;
     place-self: end;

@@ -17,8 +17,8 @@ async function hentAfsnit() {
 function visAfsnit(afsnit) {
   const container = document.querySelector("#singleview");
 
-  container.innerHTML = `
-    <section class="single-afsnit">
+  container.innerHTML = ` 
+  <section class="single-afsnit">
       <div class=afsnit-left>
           <img src="${afsnit.coverbillede}" alt="Afsnitcover ${afsnit.titel}" />
         </div>
@@ -26,7 +26,7 @@ function visAfsnit(afsnit) {
           <h3>${afsnit.titel}</h3>
           <p>${afsnit.udgivelsesdato}</p>
           <p>${afsnit.laengde}</p>
-          <p>${afsnit.beskrivelse}...</p>
+          <p class="afsnit-beskrivelse">${afsnit.beskrivelse}...</p>
         </div>
         <div class="afsnit-ikoner">
           <a href="https://open.spotify.com/show/3m8Jab1IPtWVq0r0YH2QnV"><img src="img/Spotify.svg" alt="" /></a>
@@ -82,6 +82,7 @@ function visAlleAfsnit(data) {
     if (afsnit.id == id) return;
 
     container.innerHTML += `
+  <div class="afsnit-kolonne"> 
     <section class=grid>
         <div class=afsnit-left2>
           <img src="${afsnit.coverbillede}" alt="Afsnitcover ${afsnit.titel}" />
@@ -91,8 +92,9 @@ function visAlleAfsnit(data) {
           <p>${afsnit.beskrivelse.substring(0, 50)}...</p>
           <p>${afsnit.laengde}</p>
         </div>
-        <div class=PlayBtn2><a href="afsnitSingleview.html?id=${afsnit.id}"><img src="img/PlayBtn.svg" alt="" /></a></div>
+        <div class=afspil><a href="afsnitSingleview.html?id=${afsnit.id}"><img src="img/PlayBtn.svg" alt="" /></a></div>
     </section>
+   </div>
       `;
   });
 }
