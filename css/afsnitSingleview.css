@@ -15,7 +15,7 @@ h2 {
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 2.5em;
     margin-bottom: 4em;
-    padding: 3em;
+    padding: 4em;
     place-self: center;
     background-color: var(--podcast-card-bg);
     color: var(--text-inverted);
@@ -28,8 +28,9 @@ h2 {
     max-width: 100%;
   }
 
-  .afsnit-left2 img {
+  .afsnit-left img {
     max-width: 70%;
+    border-radius: 8px;
   }
 
   .afsnit-info1 {
@@ -43,14 +44,54 @@ h2 {
     padding-bottom: 2em;
   }
 
+  .afsnit-ikoner img {
+    max-width: 110%;
+  }
+
   .PlayBtn2 {
-    text-align: center;
+    place-self: end;
+    margin-top: 9em;
+    margin-right: 2.5em;
+  }
+
+  .afspil {
     place-self: end;
     margin-top: 2em;
     margin-right: 2.5em;
   }
 
+  .afsnit-kolonne {
+    display: flex;
+    align-items: center;
+    background: var(--podcast-card-bg);
+    padding: 3em;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    color: white;
+  }
+
   .grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 10em;
+  }
+
+  .afsnit-left2 img {
+    max-width: 70%;
+    border-radius: 8px;
+  }
+
+  .alle-afsnit {
+    margin: 3em;
+    margin-left: 10em;
+    margin-right: 10em;
+  }
+
+  .afsnit-beskrivelse {
+    margin-top: 1em;
+  }
+
+  /* .grid {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
@@ -62,26 +103,16 @@ h2 {
     margin: 3em;
     margin-left: 10em;
     margin-right: 10em;
-  }
+  } */
 
-  .afsnit-left img {
+  .afsnit-left2 img {
     max-width: 70%;
-    border-radius: 8px;
   }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-  .afsnit-kolonne {
-    display: flex;
-    align-items: center;
-    background: var(--podcast-card-bg);
-    padding: 0.5em;
-    border-radius: 12px;
-    margin-bottom: 12px;
-    color: white;
-  }
-
+  /* Single view */
   .single-afsnit {
     background: var(--podcast-card-bg);
     color: white;
@@ -97,13 +128,6 @@ h2 {
     gap: 16px;
   }
 
-  .cover {
-    max-width: 100%;
-    border-radius: 12px;
-    justify-self: center;
-    padding-top: 1em;
-  }
-
   .single-afsnit h3 {
     margin-bottom: 6px;
   }
@@ -113,9 +137,25 @@ h2 {
     line-height: 1.4;
   }
 
-  .episode-info {
+  .afsnit-left img {
+    max-width: 100%;
+    border-radius: 12px;
+    justify-self: center;
+  }
+
+  .afsnit-info1 p {
+    opacity: 0.9;
+    line-height: 1.4;
+  }
+
+  .afspil {
+    text-align: center;
     margin-top: 1em;
-    opacity: 0.85;
+    margin-left: 1em;
+  }
+
+  .afspil img {
+    max-width: 80%;
   }
 
   .afsnit-ikoner {
@@ -130,6 +170,31 @@ h2 {
     border-radius: 50%;
   }
 
+  /* Liste */
+  .alle-afsnit {
+    margin: 3em;
+  }
+
+  .afsnit-kolonne {
+    display: flex;
+    align-items: center;
+    background: var(--podcast-card-bg);
+    padding: 0.5em;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    color: white;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+
+  .afsnit-left2 img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
   .afsnit-info2 {
     flex: 1;
     margin-left: 16px;
@@ -137,18 +202,25 @@ h2 {
 
   .afsnit-info2 h3 {
     font-size: small;
+    margin-bottom: 6px;
   }
 
   .afsnit-info2 p {
     font-size: x-small;
   }
 
-  .PlayBtn2 img {
-    max-width: 80%;
+  .afsnit-info2 {
+    flex: 1;
+    margin-left: 16px;
   }
-  .PlayBtn2 {
-    text-align: center;
-    margin-top: 1em;
-    margin-left: 1em;
+
+  .playBtn1 {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .playBtn1 img {
+    max-width: 100%;
   }
 }
