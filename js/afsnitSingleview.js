@@ -61,7 +61,7 @@ function visAfsnit(afsnit) {
 }
 
 async function hentAlleAfsnit() {
-  const response = await fetch("https://qbsufmwklabqmadwcgjp.supabase.co/rest/v1/afsnit?select=*", {
+  const response = await fetch("https://qbsufmwklabqmadwcgjp.supabase.co/rest/v1/afsnit?select=*&order=id.asc", {
     headers: {
       apikey: "sb_publishable_hJz8puxeXL-314yfgCnXOQ_O43qFTf7",
       Authorization: "Bearer sb_publishable_hJz8puxeXL-314yfgCnXOQ_O43qFTf7",
