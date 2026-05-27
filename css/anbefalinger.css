@@ -171,6 +171,8 @@ background-color: var(--podcast-card-bg);
   margin: 0.8em 0;
 }
 
+
+
 /* AnbefalingerSingleview */
 
 .bogSingleview img {
@@ -287,6 +289,13 @@ textarea::placeholder {
 textarea {
   width: 250px;
   height: 25px;
+}
+
+  hr {
+  max-width: 80%;
+  margin: 2em 0 0 3em;
+   border: none;
+  border-top: 1px solid #b0acac;
 }
 
 @media (min-width: 768px) {
@@ -447,5 +456,11 @@ textarea {
     margin-left: 14em;
   }
 
+  hr {
+  max-width: 80%;
+  margin: 5em 0 0 9em;
+   border: none;
+  border-top: 1px solid #b0acac;
+}
  
 }
