@@ -1,19 +1,15 @@
+"use strict";
 async function hentAnbefalinger() {
-  const response = await fetch(
-    "https://qbsufmwklabqmadwcgjp.supabase.co/rest/v1/boeger?select=*&id=in.(12,7,10)&order=id.asc",
-    {
-      headers: {
-        apikey: "sb_publishable_hJz8puxeXL-314yfgCnXOQ_O43qFTf7",
-        Authorization: "Bearer sb_publishable_hJz8puxeXL-314yfgCnXOQ_O43qFTf7",
-      },
+  const response = await fetch("https://qbsufmwklabqmadwcgjp.supabase.co/rest/v1/boeger?select=*&id=in.(12,7,10)&order=id.asc", {
+    headers: {
+      apikey: "sb_publishable_hJz8puxeXL-314yfgCnXOQ_O43qFTf7",
+      Authorization: "Bearer sb_publishable_hJz8puxeXL-314yfgCnXOQ_O43qFTf7",
     },
-  );
+  });
 
   const boeger = await response.json();
   const raekkefoelge = [12, 7, 10];
-  const sorteret = raekkefoelge.map((id) =>
-    boeger.find((bog) => bog.id === id),
-  );
+  const sorteret = raekkefoelge.map((id) => boeger.find((bog) => bog.id === id));
   const grid = document.querySelector(".grid");
 
   console.log("Grid element:", grid);

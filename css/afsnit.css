@@ -1,6 +1,6 @@
 h1 {
-  text-align: center;
-  margin-top: 1.5em;
+  text-align: left;
+  margin: 1em 2em;
 }
 
 h2 {
@@ -9,7 +9,7 @@ h2 {
 
 /* Afsnit */
 /* Desktop */
-@media (width>768px) {
+@media (width>800px) {
   .afsnit-kort {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -35,8 +35,10 @@ h2 {
     padding-bottom: 2em;
   }
 
-  .afsnit-ikoner img {
-    max-width: 110%;
+  .afsnit-ikoner a img {
+    width: 56px;
+    height: auto;
+    border-radius: 50%;
   }
 
   .playBtn1 {
@@ -84,17 +86,6 @@ h2 {
     max-width: 100%;
   }
 
-  .afsnit-ikoner {
-    display: flex;
-    gap: 1em;
-    margin-left: 2.5em;
-    padding-bottom: 2em;
-  }
-
-  .afsnit-ikoner img {
-    max-width: 110%;
-  }
-
   .playBtn1 {
     place-self: end;
     margin-top: 9em;
@@ -114,7 +105,11 @@ h2 {
 }
 
 /* Mobil */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
+  h1 {
+    text-align: center;
+    margin-top: 1.5em;
+  }
   .afsnit-kolonne {
     display: flex;
     align-items: center;
@@ -169,7 +164,8 @@ h2 {
   }
 
   .afsnit-ikoner img {
-    max-width: 100%;
+    width: 56px;
+    height: auto;
     border-radius: 50%;
   }
 

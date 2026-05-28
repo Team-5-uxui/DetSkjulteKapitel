@@ -39,7 +39,6 @@ function visKurv() {
 function ændreAntal(index, ændring) {
   kurv[index].antal += ændring;
 
-  // Fjern produktet hvis antal når 0
   if (kurv[index].antal <= 0) {
     kurv.splice(index, 1);
   }
