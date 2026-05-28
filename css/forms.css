@@ -95,7 +95,6 @@ input[type="checkbox"] {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-weight:;
   .bold {
     font-weight: 500;
   }

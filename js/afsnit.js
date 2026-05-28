@@ -1,3 +1,5 @@
+"use strict";
+
 async function hentAlleAfsnit() {
   const response = await fetch(
     "https://qbsufmwklabqmadwcgjp.supabase.co/rest/v1/afsnit?select=*&order=id.asc",

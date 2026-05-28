@@ -1,6 +1,6 @@
 h1 {
-  text-align: center;
-  margin-top: 1.5em;
+  text-align: left;
+  margin: 1em 2em;
 }
 
 h2 {
@@ -44,8 +44,9 @@ h2 {
     padding-bottom: 2em;
   }
 
-  .afsnit-ikoner img {
-    max-width: 110%;
+  .afsnit-ikoner a img {
+    width: 56px;
+    height: auto;
   }
 
   .PlayBtn2 {
@@ -91,20 +92,6 @@ h2 {
     margin-top: 1em;
   }
 
-  /* .grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    align-items: center;
-    background: var(--podcast-card-bg);
-    padding: 3em;
-    border-radius: 12px;
-    margin-bottom: 12px;
-    color: white;
-    margin: 3em;
-    margin-left: 10em;
-    margin-right: 10em;
-  } */
-
   .afsnit-left2 img {
     max-width: 70%;
   }
@@ -113,6 +100,10 @@ h2 {
 /* Mobile */
 @media (max-width: 768px) {
   /* Single view */
+  h1 {
+    text-align: center;
+    margin-top: 1.5em;
+  }
   .single-afsnit {
     background: var(--podcast-card-bg);
     color: white;
@@ -165,9 +156,9 @@ h2 {
     width: 100%;
   }
 
-  .afsnit-ikoner img {
-    max-width: 100%;
-    border-radius: 50%;
+  .afsnit-ikoner a img {
+    width: 56px;
+    height: auto;
   }
 
   /* Liste */

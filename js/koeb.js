@@ -1,7 +1,7 @@
+"use strict";
 let selected = null;
 
 function selectPayment(val) {
-  // Nulstil alle
   document.querySelectorAll(".radio-circle").forEach((el) => {
     el.classList.remove("filled");
   });

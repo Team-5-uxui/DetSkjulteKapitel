@@ -7,7 +7,7 @@ h2 {
   padding: 2em 0 2em 0;
 }
 
- h1 {
+h1 {
   place-self: center;
   padding: 2em 0 2em 0;
 }
@@ -51,7 +51,7 @@ h2 {
 }
 
 .AnbefalingCard {
-   background-color: var(--book-card-bg);
+  background-color: var(--book-card-bg);
   padding: 4em 2em 3em 2em;
   margin: 4em;
   border-radius: 20px;
@@ -61,9 +61,8 @@ h2 {
   position: relative;
 }
 
-
 .IndividuelAnbefaling {
-background-color: var(--podcast-card-bg);
+  background-color: var(--podcast-card-bg);
   color: var(--text-inverted);
   border-radius: 20px;
   padding: 0.5em 1em;
@@ -171,18 +170,15 @@ background-color: var(--podcast-card-bg);
   margin: 0.8em 0;
 }
 
-
-
 /* AnbefalingerSingleview */
 
 .bogSingleview img {
   display: grid;
   max-width: 70%;
   place-self: center;
-  
 }
 .IndividuelAnbefaling2 {
-     background-color: var(--podcast-card-bg);
+  background-color: var(--podcast-card-bg);
   color: var(--text-inverted);
   border-radius: 20px;
   position: relative;
@@ -291,10 +287,10 @@ textarea {
   height: 25px;
 }
 
-  hr {
+hr.kommentarStreg {
   max-width: 80%;
   margin: 2em 0 0 3em;
-   border: none;
+  border: none;
   border-top: 1px solid #b0acac;
 }
 
@@ -309,11 +305,11 @@ textarea {
     margin-bottom: 2.5em;
   }
 
-  h1{
+  h1 {
     margin: 0 0 1em 2em;
   }
 
-  .h1{
+  .h1 {
     margin: 4em 0 0.5em 0;
   }
 
@@ -381,13 +377,11 @@ textarea {
     place-self: center;
   }
 
-
   /* AnbefalingerSingleview */
 
   .IndividuelAnbefaling2 {
     position: relative;
     margin-top: 2em;
-    margin-left: em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     padding-left: 1em;
@@ -398,7 +392,6 @@ textarea {
     display: grid;
     max-width: 60%;
     place-self: center;
-   
   }
 
   .bogSingleview {
@@ -456,11 +449,10 @@ textarea {
     margin-left: 14em;
   }
 
-  hr {
-  max-width: 80%;
-  margin: 5em 0 0 9em;
-   border: none;
-  border-top: 1px solid #b0acac;
-}
- 
+  hr.kommentarStreg {
+    max-width: 80%;
+    margin: 5em 0 0 9em;
+    border: none;
+    border-top: 1px solid #b0acac;
+  }
 }

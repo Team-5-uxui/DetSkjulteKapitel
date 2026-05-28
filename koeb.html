@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="dk">
+<html lang="da">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -49,7 +49,7 @@
     <main>
       <h1>Betaling</h1>
       <section id="kob-form">
-        <h2> Leverings oplysninger</h2>
+        <h2>Leverings oplysninger</h2>
         <form id="kobform">
           <div class="form-group">
             <label for="firstname">Fornavn</label>
@@ -63,12 +63,12 @@
           </div>
           <div class="form-group right-column">
             <label for="email">E-mail</label>
-            <input type="email" name="email" id="email" required />
+            <input type="email" name="mail" id="email" required />
             <p class="error-message">Udfyld venligst feltet</p>
           </div>
           <div class="form-group right-column">
             <label for="phonenumber">Telefonnummer</label>
-            <input type="number" id="phonenumber" name="phonenumber" required />
+            <input type="tel" id="phonenumber" name="phonenumber" required />
             <p class="error-message">Udfyld venligst feltet</p>
           </div>
           <div class="form-group">
@@ -76,83 +76,92 @@
             <input type="text" id="address" name="address" required />
             <p class="error-message">Udfyld venligst feltet</p>
           </div>
+          <div class="form-group">
+            <label for="postalcode">Postnummer</label>
+            <input type="number" name="postnummer" id="postalcode" required />
+            <p class="error-message">Udfyld venigst feltet</p>
+          </div>
+          <div class="form-group">
+            <label for="city">By</label>
+            <input type="text" name="city" id="city" required />
+            <p class="error-message">Udfyld venligst feltet</p>
+          </div>
         </form>
       </section>
       <section class="betaling-wrap">
-        
-  <h3>Vælg betalingsmetode</h3>
+        <h3>Vælg betalingsmetode</h3>
 
-  <div class="radio-group" role="radiogroup">
-    <label class="radio-option" onclick="selectPayment('kort')">
-      <div class="radio-circle" id="circle-kort"></div>
-      Kort
-    </label>
-    <label class="radio-option" onclick="selectPayment('mobilepay')">
-      <div class="radio-circle" id="circle-mobilepay"></div>
-      MobilePay
-    </label>
-  </div>
+        <div class="radio-group" role="radiogroup">
+          <label class="radio-option" onclick="selectPayment('kort')">
+            <span class="radio-circle" id="circle-kort"></span>
+            Kort
+          </label>
+          <label class="radio-option" onclick="selectPayment('mobilepay')">
+            <span class="radio-circle" id="circle-mobilepay"></span>
+            MobilePay
+          </label>
+        </div>
 
-  <div class="checkbox-group" >
-    <label for="terms">
-    <input type="checkbox" id="terms" name="accept-terms" value="yes" required>
-    Jeg accepterer handelsbetingelserne
-  </label>
-  </div>
+        <div class="checkbox-group">
+          <label for="terms">
+            <input type="checkbox" id="terms" name="accept-terms" value="yes" required />
+            Jeg accepterer handelsbetingelserne
+          </label>
+        </div>
 
-  <button class="kob-btn" onclick="handleKøb()">
-    Gennemfør køb →
-  </button>
-</div>
+        <button class="kob-btn">Gennemfør køb →</button>
       </section>
-      <hr>
+      <hr />
       <section class="ordreoversigt-section">
         <h3>Ordreoversigt</h3>
         <div class="product-short">
-        <span>Produktnavn x 1</span>
-        <span>--- kr.</span>
-</div>
- <div class="product-short">
-        <span>Produktnavn x 1</span>
-        <span>--- kr.</span>
-</div>
- <div class="product-short">
-        <span>Produktnavn x 1</span>
-        <span>--- kr.</span>
-</div>
- <div class="product-short">
-        <span>Fragt</span>
-        <span>--- kr.</span>
-</div></section>
-<hr>
-<section class="total-section">
-<div class="total">
-  <span class="bold">Samlet pris</span>
-  <span>--- kr.</span>
-</div>
-   </section>   
+          <span>Produktnavn x 1</span>
+          <span>--- kr.</span>
+        </div>
+        <div class="product-short">
+          <span>Produktnavn x 1</span>
+          <span>--- kr.</span>
+        </div>
+        <div class="product-short">
+          <span>Produktnavn x 1</span>
+          <span>--- kr.</span>
+        </div>
+        <div class="product-short">
+          <span>Fragt</span>
+          <span>--- kr.</span>
+        </div>
+      </section>
+      <hr />
+      <section class="total-section">
+        <div class="total">
+          <span class="bold">Samlet pris</span>
+          <span>--- kr.</span>
+        </div>
+      </section>
     </main>
     <footer>
       <div class="footer-inner">
-        <div class="footer-social">
-          <span class="footer-label">Find os</span>
-          <div class="social-icons">
-            <a href="#"><img src="" alt="Instagram" /></a>
-            <a href="#"><img src="" alt="Facebook" /></a>
-            <a href="#"><img src="" alt="TikTok" /></a>
-          </div>
-        </div>
-
-        <a href="#" class="footer-logo">
+        <a href="index.html" class="footer-logo">
           <img src="img/Logo.svg" alt="Det Skjulte Kapitel" class="logo-img-footer" />
         </a>
 
-        <div class="footer-listen">
-          <span class="footer-label">Lyt med</span>
-          <div class="social-icons">
-            <a href="#"><img src="" alt="Spotify" /></a>
-            <a href="#"><img src="" alt="Podimo" /></a>
-            <a href="#"><img src="" alt="Apple Music" /></a>
+        <div class="footer-bottom-row">
+          <div class="footer-social">
+            <span class="footer-label">Find os</span>
+            <div class="social-icons">
+              <a href="https://www.instagram.com/detskjultekapitel/"><img src="img/Instagram.svg" alt="Instagram" /></a>
+              <a href="https://www.facebook.com/profile.php?id=61585024211420"><img src="img/Facebook.svg" alt="Facebook" /></a>
+              <a href="https://www.tiktok.com/@detskjultekapitel"><img src="img/TikTok.svg" alt="TikTok" /></a>
+            </div>
+          </div>
+
+          <div class="footer-listen">
+            <span class="footer-label">Lyt med</span>
+            <div class="social-icons">
+              <a href="https://open.spotify.com/show/3m8Jab1IPtWVq0r0YH2QnV"><img src="img/Spotify.svg" alt="Spotify" /></a>
+              <a href="https://open.podimo.com/podcast/a7241b3f-1531-4056-aa6a-d502dbbe5295"><img src="img/Podimo.svg" alt="Podimo" /></a>
+              <a href="https://podcasts.apple.com/dk/podcast/det-skjulte-kapitel/id1886661915"><img class="apple" src="img/applepodcast.svg" alt="Apple Podcast" /></a>
+            </div>
           </div>
         </div>
       </div>
