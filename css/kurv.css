@@ -103,7 +103,7 @@ hr {
 }
 
 .total-row.bold span:not(#samlet) {
-  font-weight: bold;
+  font-family: "Poppins Bold";
   margin: 0;
   font-size: 1em;
 }
@@ -117,7 +117,6 @@ hr {
   background: var(--primary-btn);
   color: white;
   margin: 1.5em 0 0.5em 0;
-  font-size: 15px;
 }
 
 .fortsaet-link {
@@ -125,7 +124,7 @@ hr {
   text-align: center;
   text-decoration: underline;
   color: var(--text-color);
-  font-size: 13px;
+  font-family: "Poppins Light";
   margin-bottom: 2em;
 }
 
@@ -163,6 +162,7 @@ hr {
   }
 
   .total-row.bold span:not(#samlet) {
+    font-family: "Poppins Bold";
     font-size: 1.25rem;
   }
 

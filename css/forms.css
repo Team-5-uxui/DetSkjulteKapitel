@@ -33,7 +33,7 @@ hr {
   margin: 3rem 0;
 }
 input {
-  font-family: "Helvetica Neue";
+  font-family: "Poppins Light";
   font-weight: 300;
 }
 input[type="checkbox"] {
@@ -96,7 +96,7 @@ input[type="checkbox"] {
   flex-direction: row;
   justify-content: space-between;
   .bold {
-    font-weight: 500;
+    font-family: "Poppins Bold";
   }
 }
 /* Desktop */
@@ -134,7 +134,7 @@ input[type="checkbox"] {
     }
   }
   .error-message {
-    font-family: "Helvetica Neue";
+    font-family: "Poppins Light";
     font-weight: 300;
     font-size: 0.9rem;
   }
@@ -233,7 +233,7 @@ input[type="checkbox"] {
       font-size: 0.8rem;
     }
     .error-message {
-      font-family: "Helvetica Neue";
+      font-family: "Poppins Light";
       font-weight: 300;
       font-size: 0.8rem;
     }
