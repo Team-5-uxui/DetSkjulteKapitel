@@ -34,18 +34,18 @@ h2 {
   font-size: 1.75rem;
 }
 h3 {
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica";
   font-weight: 700;
   font-size: 1.5rem;
 }
 h4,
 .kob-btn {
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica";
   font-weight: 400;
   font-size: 1.375rem;
 }
 h5 {
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica";
   font-weight: 600;
   font-size: 1.25rem;
 }
@@ -56,13 +56,13 @@ p,
 label,
 span,
 .btn {
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica";
   font-weight: 300;
   font-size: 1.25rem;
 }
 
 nav {
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica";
   font-weight: 300;
 }
 
@@ -79,18 +79,18 @@ nav {
     font-size: 1.625rem;
   }
   h3 {
-    font-family: "Helvetica Neue";
+    font-family: "Helvetica";
     font-weight: 500;
     font-size: 1.4rem;
   }
   h4,
   .kob-btn {
-    font-family: "Helvetica Neue";
+    font-family: "Helvetica";
     font-weight: 400;
     font-size: 1.375rem;
   }
   h5 {
-    font-family: "Helvetica Neue";
+    font-family: "Helvetica";
     font-weight: 600;
     font-size: 1.25rem;
   }
@@ -101,13 +101,13 @@ nav {
   label,
   span,
   .btn {
-    font-family: "Helvetica Neue";
+    font-family: "Helvetica";
     font-weight: 300;
     font-size: 1rem;
   }
 
   nav {
-    font-family: "Helvetica Neue";
+    font-family: "Helvetica";
     font-weight: 300;
     font-size: 1.375rem;
   }
