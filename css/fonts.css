@@ -12,3 +12,18 @@
   font-family: "Cinzel Decorative";
   src: url(../fonts/CinzelDecorative-Regular.woff2);
 }
+
+@font-face {
+  font-family: "Poppins Bold";
+  src: url(../fonts/Poppins-Bold.woff2);
+}
+
+@font-face {
+  font-family: "Poppins Regular";
+  src: url(../fonts/Poppins-Regular.woff2);
+}
+
+@font-face {
+  font-family: "Poppins Light";
+  src: url(../fonts/Poppins-Light.woff2);
+}
